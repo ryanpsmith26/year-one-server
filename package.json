@@ -1,12 +1,13 @@
 {
-  "name": "zoc-doc-app",
+  "name": "my-zoc-doc-server",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
-    "start-dev": "nodemon server/main.js"
+    "start": "node main",
+    "start-dev": "nodemon server/main",
+    "seed": "node seed"
   },
   "keywords": [],
   "author": "",
@@ -17,12 +18,14 @@
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
     "babel-preset-react": "^6.24.1",
+    "faker": "^5.1.0",
     "webpack": "^2.1.0-beta.22",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "pg": "^8.4.2",

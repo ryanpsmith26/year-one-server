@@ -1,6 +1,9 @@
 const router = require('express').Router();
 
-// mount sub-routers
+// USE /api -- mount sub-routers
+router.use('/doctors', require('./doctor'));
+router.use('/patients', require('./patient'));
+router.use('/appts', require('./appt'));
 
 router.use((req, res, next) => {
 	const err = new Error('API route not found!');
