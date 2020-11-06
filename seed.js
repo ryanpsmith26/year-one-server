@@ -11,7 +11,6 @@ async function seed() {
 		console.log(blue('🌱 Seeding the database...'));
 
 		// Seed the database:
-		// ===================================
 		// Doctors
 		for (let i = 0; i < 1000; i++) {
 			await Doctor.create({
@@ -34,14 +33,14 @@ async function seed() {
 		for (let i = 0; i < 500; i++) {
 			await Appt.create({
 				date: faker.date.future(),
-				PatientId: Math.floor(Math.random() * 1000) + 1,
-				DoctorId: Math.floor(Math.random() * 1000) + 1
+				patientId: Math.floor(Math.random() * 1000) + 1,
+				doctorId: Math.floor(Math.random() * 1000) + 1
 			});
 
 			await Appt.create({
 				date: faker.date.past(),
-				PatientId: Math.floor(Math.random() * 1000) + 1,
-				DoctorId: Math.floor(Math.random() * 1000) + 1
+				patientId: Math.floor(Math.random() * 1000) + 1,
+				doctorId: Math.floor(Math.random() * 1000) + 1
 			});
 		}
 
