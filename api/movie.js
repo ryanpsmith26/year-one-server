@@ -1,11 +1,20 @@
 const router = require('express').Router();
-const { Doctor, Patient, Appt } = require('../db');
+const { Movie } = require('../db');
 
-// GET /api/doctors
+// GET /api/movies
 router.get('/', async (req, res, next) => {
 	try {
-		const doctors = await Doctor.findAll();
-		res.json(doctors);
+		const movies = await Movie.findAll();
+		res.json(movies);
+	} catch (error) {
+		next(error);
+	}
+});
+
+// POST /api/movies
+router.post('/', async (req, res, next) => {
+	try {
+		await Movie.findOrCreate({});
 	} catch (error) {
 		next(error);
 	}
