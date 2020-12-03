@@ -4,7 +4,7 @@
 #### Backend Setup
 
 - Clone the code from **this** repo to your machine.
-- Make sure you have PostgreSQL installed on your machine and create a new database named year-one:
+- Make sure you have both Node.js and PostgreSQL installed on your machine and create a new database named year-one:
 
 ```zsh
 createdb year-one
